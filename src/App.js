@@ -1,23 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
+import Catlist from "./components/CatList";
 
-function App() {
+const DATA = [
+  {
+    name: "Ubik",
+    caretaker: "Maria",
+    color: "grey",
+    personality: "wild child",
+  },
+  {
+    name: "Pepper",
+    caretaker: "Mark",
+    color: "black",
+    personality: "spicy",
+  },
+  {
+    name: "Binx",
+    caretaker: "Susan",
+    color: "tuxedo",
+    personality: "feral",
+  },
+];
+
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Flasky</h1>
       </header>
+      <main>
+        <Catlist catData={DATA}/>
+        </main>
     </div>
   );
 }
